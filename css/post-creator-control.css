@@ -1,0 +1,61 @@
+.submit-post-control > .title > .chars-remaining {
+	float: right;
+	color: #445056;
+	font-weight: normal;
+	font-size: 9px;
+}
+
+.submit-post-control > .title > .prompt {
+	font-weight: bold;
+	font-size: 10pt;
+	float: left;
+}
+
+.submit-post-control > textarea {
+	width: 100%;
+	display: block;
+	font-size: 10pt;
+	background-color: #FFFFFF;
+	padding: 0px;
+	overflow:visible;
+}
+
+.submit-post-control > textarea.shrunken {
+	font-style: italic;
+	color: #6F6F6F;
+	margin-top: 0px;
+	line-height: normal;
+	height: 30px;
+}
+
+.submit-post-control > textarea.expanded {
+	height: 60px;
+	border: solid 1px #9FB5C5;
+}
+
+.submit-post-control > .button-panel {
+	width: 100%;
+	margin-top: 3px;
+}
+
+.submit-post-control > .button-panel button {
+	background: url(../images/button_background.png) repeat-x scroll left top;
+	border-top: 1px solid #A9B7C6;
+	border-left: 1px solid #A9B7C6;
+	border-bottom: 1px solid #657F97;
+	border-right: 1px solid #657F97;
+	padding: 3px 0;
+	font-size: 12px;
+	cursor: pointer;
+	height: 34px;
+	width: 80px;
+	float: right;
+}
+
+.submit-post-control > .button-panel button.hover {
+	background: url(../images/button_background_mo.png) repeat-x scroll left top;
+	border-top: 1px solid #FFC727;
+	border-left: 1px solid #FFC727;
+	border-bottom: 1px solid #D39300;
+	border-right: 1px solid #D39300;
+}

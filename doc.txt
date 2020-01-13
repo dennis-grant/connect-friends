@@ -1,0 +1,68 @@
+Overview
+----------
+
+ConnectFriends is a simple experimental social app. It covers about 15 use cases (user stories).
+These include:
+	1. show all users
+	2. show favorite posts
+	3. submit post
+	4. follow user
+	5. show users I am following
+	etc
+
+The goal of ConnectFriends is to practice javascript programming skills:
+	1. Explore Javascript application design
+	2. Experiment with a few generic controls which can be used in up coming projects.
+
+A few of the main application design ideas I experimented with are:
+	1. Model View Controller design pattern
+	2. Limited scope generic controls
+	3. Covering every aspect of interface using Controls
+
+
+MVC
+-----
+
+The role of the model is to captured all the data being processed by the client, cached from the server.
+
+The controller acts as a mediator between the server and the model. All communications with the server takes
+place through the controller and all changes to the model are only done by the controller.
+
+The view serves to display the current state of the model and to capture user interactions.
+
+To integrate the above parts an application object is used. The application object initializes the model,
+view and controller; listens to all events triggered in the view, making the required calls to the controller;
+and refreshes the view when required.
+
+
+Controls
+----------
+
+ListControl
+MainDisplayPanel
+Panel
+ActionControl
+SimpleActionListControl
+UserDisplayControl
+PostDisplayControl
+PostCreatorControl
+
+
+FAQ
+-----
+
+Q. How is the main display panel updated
+A. The main display panel uses a list-control. Any change to the model
+   of the list-control automatically causes the view to be updated.
+
+
+Benefits
+----------
+
+1. Independent controls which can be developed, tested and debugged by themselves.
+
+2. A lot more flexibility in changing the view without affecting the rest of the application
+
+3. A well known/proven design pattern.
+
+4. Much faster development with each part having a simplified clearly defined role.

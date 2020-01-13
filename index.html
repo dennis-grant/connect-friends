@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>Connect Friends</title>
+<link rel="stylesheet" type="text/css" href="css/dkg-dynamic-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/post-creator-control.css" />
+<link rel="stylesheet" type="text/css" href="css/post-info-control.css" />
+<link rel="stylesheet" type="text/css" href="css/user-info-control.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+
+<script type="text/javascript" src="js/simple-web-db.js"></script>
+<script type="text/javascript" src="js/cf-server.js"></script>
+
+<script type="text/javascript" src="js/dkg-dynamic-ui.js"></script>
+
+<script type="text/javascript" src="js/create-post-control.js"></script>
+<script type="text/javascript" src="js/user-info-control.js"></script>
+<script type="text/javascript" src="js/post-info-control.js"></script>
+<script type="text/javascript" src="js/main-display-panel.js"></script>
+<script type="text/javascript" src="js/cf-controller.js"></script>
+<script type="text/javascript" src="js/cf-app.js"></script>
+<script type="text/javascript">
+var app;
+var serverConn;
+
+function init() {
+	var dbConn;
+
+	dbConn = new DeaconDB.Connection("dfield");
+	serverConn = new ConnectFriendsServer.Connection(dbConn, {userId: 1, firstName: "dennis", lastName: "grant"});
+	app = new ConnectFriends.App(serverConn);
+
+	$("#column1").append(app.view.postsActionPanel.getControlElement());
+	$("#column1").append($("<div class='separator'></div>"));
+	$("#column1").append(app.view.usersActionPanel.getControlElement());
+
+	$("#column2").append(app.view.createPostControl.getControlElement());
+	$("#column2").append($("<div class='separator'></div>"));
+	$("#column2").append(app.view.mainDisplayPanel.getControlElement());
+}
+
+$(document).ready(init);
+</script>
+</head>
+<body>
+
+<div class="page-header">
+	<img src="images/cf-header.gif"> ConnectFriends
+</div>
+
+<div>
+	<div id="column1"></div>
+	<div id="column2"></div>
+	<div style="clear: both;"></div>
+</div>
+
+
+<textarea id="dfield" rows="3" cols="200" style="display: none;">
+{
+	users: [
+		{userId: 1, firstName: "dennis", lastName: "grant", email: "dgrant@opentext.com", position: "software engineer", photo: "no_photo.gif"},
+		{userId: 2, firstName: "meg", lastName: "ryan", email: "mgrant@gmail.com", position: "student", photo: "no_photo.gif"},
+		{userId: 3, firstName: "eddie", lastName: "murphy", email: "eddie.murphy@test.com", position: "comedian", photo: "no_photo.gif"},
+		{userId: 4, firstName: "thomas", lastName: "paine", email: "tpaine@bet.com", position: "singer", photo: "no_photo.gif"},
+		{userId: 12, firstName: "hefuu", lastName: "moore", email: "hmoore@test.com", position: "commentator", photo: "no_photo.gif"},
+		{userId: 13, firstName: "mary", lastName: "kennedy", email: "lmkennedy@test.com", position: "master of business", photo: "no_photo.gif"}
+	],
+	posts: [
+		{postId: 1, post: "post 1", postedById: 2, startPostId: -1},
+		{postId: 2, post: "post 2", postedById: 3, startPostId: -1},
+		{postId: 3, post: "post 3", postedById: 1, startPostId: -1},
+		{postId: 4, post: "post 4", postedById: 12, startPostId: -1},
+		{postId: 5, post: "post 5", postedById: 1, startPostId: -1}
+	],
+	followers: [
+		{followeeId: 1, followerId: 2},
+		{followeeId: 2, followerId: 3},
+		{followeeId: 3, followerId: 1},
+		{followeeId: 1, followerId: 3},
+		{followeeId: 3, followerId: 3},
+		{followeeId: 12, followerId: 1},
+		{followeeId: 3, followerId: 4}
+	],
+	likes: [
+		{postId: 1, userId: 1},
+		{postId: 2, userId: 1}
+	]
+}
+</textarea>
+</body>
+</html>

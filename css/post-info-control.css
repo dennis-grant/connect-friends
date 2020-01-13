@@ -1,0 +1,32 @@
+.post-info-control {
+	padding: 3px;
+}
+
+.post-info-control .photo, .post-info-control .details {
+	float: left;
+}
+
+.post-info-control .photo  img {
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+
+.post-info-control .details {
+	padding-left: 3px;
+	width: 600px;
+	border: solid 0px #0f0;
+}
+
+.post-info-control .name {
+	font-weight: bold;
+}
+
+.post-info-control .simple-action-list-control {
+	float: right;
+}
+
+.post-info-control > .details .submit-post-control {
+	padding: 7px;
+	background-color: #cccccc;
+}

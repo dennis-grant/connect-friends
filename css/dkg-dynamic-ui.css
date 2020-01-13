@@ -1,0 +1,79 @@
+/******************** List ******************/
+.list-control {
+	border: solid 1px #00f;
+	overflow: scroll;
+}
+
+.list-control .list-control-entry {
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom: solid 1px #F0F0F0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.list-control .highlighted-entry {
+	background-color: #F4F7FC;
+}
+
+.list-control .selected-entry {
+	background-color: #B3D7E3;
+	color: #333333;
+}
+
+
+/******************** Action ******************/
+.action-control {
+	cursor: pointer;
+	color: #0000ff;
+	font-size: 12px;
+	margin-right: 5px;
+	padding: 2px;
+}
+
+.action-control .icon, .action-control .label {
+	float: left;
+}
+
+.action-control .label {
+	padding-top: 2px;
+	margin-left: 3px;
+}
+
+.simple-action-list-control {
+	border: solid 0px #00f;
+}
+
+.simple-action-list-control .simple-list-control-entry {
+	float: left;
+	border: solid 0px #0f0;
+}
+
+
+/******************** Panel ******************/
+.panel-control {
+	border: solid 1px #888888;
+}
+
+.panel-control > .header {
+	vertical-align: middle;
+	color: #666666;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	height: 26px;
+	width: 100%;
+	border-top: solid 1px #B3CBDC;
+	background-color: #DFE9F0; 
+	background: url(../images/widgetheader.gif) repeat-x scroll left top;
+}
+
+.panel-control > .header .icon, .panel-control > .header .title {
+	float: left;
+	margin-left: 5px;
+	margin-top: 3px;
+}
+
+.panel-control > .content {
+	clear: both;
+}

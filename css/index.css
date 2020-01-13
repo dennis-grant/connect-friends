@@ -1,0 +1,32 @@
+.panel-control .list-control {
+	border: 0px;
+}
+
+body {
+	font-family: Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 10pt;
+}
+
+.page-header {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#column1 {
+	width: 200px;
+	float: left;
+	margin-right: 15px;
+}
+
+#column2 {
+	width: 800px;
+	float: left;
+}
+
+.separator {
+	height: 25px;
+}
+
+.list-control {
+	overflow: auto;
+}
